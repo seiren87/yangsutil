@@ -1,0 +1,15 @@
+# build directories
+build/
+dist/
+metacmd.egg-info/
+
+# virtualenv directories
+venv.dir/
+
+# pycharm directories
+.idea/
+
+# files
+*.pyc
+*.whl
+
