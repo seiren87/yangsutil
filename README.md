@@ -24,6 +24,7 @@ $ pip install yangsutil
     - read_json_file
     - save_json_file
     - save_csv_file
+    - read_yml_file
 
 4. Log Util
     - get_logger
@@ -54,7 +55,6 @@ $ pip install yangsutil
     - post
     - crawl
  
- 
 ---
 
 #### Libraries
@@ -63,3 +63,4 @@ $ pip install yangsutil
 2. DateUtils
 3. PyCrypto
 4. Requests
+5. PyYaml

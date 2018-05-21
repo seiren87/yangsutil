@@ -1,7 +1,7 @@
 # build directories
 build/
 dist/
-metacmd.egg-info/
+yangsutil.egg-info/
 
 # virtualenv directories
 venv.dir/

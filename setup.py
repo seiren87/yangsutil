@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='yangsutil',
-    version='0.0.1',
+    version='0.0.2',
     description='Utilities',
     long_description='Utilities',
     keywords=['util', 'datetime', 'request', 'crypt'],
@@ -14,11 +14,12 @@ setup(
     install_requires=[
         'dateutils==0.6.6',
         'pycrypto==2.6.1',
+        'pyyaml==3.12',
         'requests==2.18.4',
         'bs4==0.0.1'
     ],
     packages=find_packages(
-        exclude=['testcases']
+        exclude=['test*']
     ),
     zip_safe=False,
     classifiers=[

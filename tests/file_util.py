@@ -7,11 +7,9 @@ from yangsutil import FileUtil
 
 class FileUtilTestCase(unittest.TestCase):
     def setUp(self):
-        self.DIRECTORY = 'log/test'
+        self.DIRECTORY = 'file'
         self.FILE_NAME = 'test.log'
         self.CONTENTS = 'I Love Jellicle'
-
-        self.META_DIRECTORY = 'tests/meta_file'
 
     def test_1_file_read_write(self):
         file_path = os.path.join(self.DIRECTORY, self.FILE_NAME)
@@ -59,7 +57,43 @@ class FileUtilTestCase(unittest.TestCase):
                 dict_list=[
                     {'a': 1, 'b': 'asdf'},
                     {'a': 2, 'b': 'qwer'},
-                ])
+                ]),
+            msg="csv save"
+        )
+
+    def test_4_read_yml_file(self):
+        file_path = '%s/test.yml' % self.DIRECTORY
+
+        FileUtil.save_file(
+            file_path=file_path,
+            string_contents="""a list:
+- 1
+- 42
+- 3.141
+- 1337
+- help
+a string: bla
+another dict:
+  foo: bar
+  key: value
+  the answer: 42
+"""
+        )
+
+        yml_data = FileUtil.read_yml_file(file_path=file_path)
+
+        self.assertDictEqual(
+            yml_data,
+            {
+                'a list': [1, 42, 3.141, 1337, 'help'],
+                'a string': 'bla',
+                'another dict': {
+                    'foo': 'bar',
+                    'key': 'value',
+                    'the answer': 42
+                }
+            },
+            msg="yaml read"
         )
 
     def tearDown(self):

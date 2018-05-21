@@ -1,6 +1,7 @@
 import os
 import json
 import csv
+import yaml
 
 
 class FileUtil:
@@ -82,3 +83,17 @@ class FileUtil:
                 writer.writerow(dict_item)
 
         return True
+
+    @staticmethod
+    def read_yml_file(file_path):
+        raw = FileUtil.read_file(file_path=file_path)
+
+        if raw is None:
+            return None
+
+        try:
+            to_json = yaml.safe_load(raw)
+        except yaml.YAMLError:
+            return None
+
+        return dict(to_json)
