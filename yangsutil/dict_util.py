@@ -1,3 +1,6 @@
+from yangsutil.string_util import StringUtil
+
+
 class DictUtil:
     @staticmethod
     def dict_list_to_dict(dict_list, order_key=None):
@@ -27,3 +30,16 @@ class DictUtil:
                 result_dict[result_dict_key].sort(key=lambda x: x[order_key])
 
         return result_dict
+
+    @staticmethod
+    def is_avail_key(dict_obj, key):
+
+        try:
+            tmp = dict_obj[key]
+        except KeyError:
+            return False
+
+        if type(tmp) == str:
+            return not StringUtil.is_none(tmp)
+        else:
+            return True

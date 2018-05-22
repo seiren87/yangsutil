@@ -1,2 +1,9 @@
-from tests import DateTimeUtilTestCase, DictUtilTestCase, FileUtilTestCase, LogUtilTestCase, ObjectUtilTestCase, \
-    ShieldUtilTestCase, StringUtilTestCase, WebUtilTestCase
+from tests import DateTimeUtilTestCase
+from tests import DictUtilTestCase
+from tests import FileUtilTestCase
+from tests import LogUtilTestCase
+from tests import ObjectUtilTestCase
+from tests import ShieldUtilTestCase
+from tests import StringUtilTestCase
+from tests import WebUtilTestCase
+from tests import IntegerUtilTestCase

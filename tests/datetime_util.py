@@ -425,6 +425,13 @@ class DateTimeUtilTestCase(unittest.TestCase):
             msg='minus one day plus one second'
         )
 
-    @unittest.skip
-    def test_7_get_date_diff(self):
-        pass
+    def test_7_get_timestamp(self):
+
+        self.assertEqual(
+            DateTimeUtil.get_timestamp(
+                src_object='20180522113335',
+                src_object_form='%Y%m%d%H%M%S'
+            ),
+            1526956415,
+            msg='2018/5/22 11:33:35 (KR/GMT+09:00) test ==> TimeStamp : GMT'
+        )

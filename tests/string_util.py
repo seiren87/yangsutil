@@ -6,22 +6,22 @@ from yangsutil import StringUtil
 class StringUtilTestCase(unittest.TestCase):
     def test_1_empty_string(self):
         self.assertTrue(
-            StringUtil.is_empty_string(string=''),
+            StringUtil.is_none(string=''),
             msg='string is blank'
         )
 
         self.assertTrue(
-            StringUtil.is_empty_string(string=None),
+            StringUtil.is_none(string=None),
             msg='string is None'
         )
 
-        self.assertFalse(
-            StringUtil.is_empty_string(string=' '),
-            msg='string is one word blank'
+        self.assertTrue(
+            StringUtil.is_none(string=' '),
+            msg='string is none'
         )
 
         self.assertFalse(
-            StringUtil.is_empty_string(string='123asdf'),
+            StringUtil.is_none(string='123asdf'),
             msg='string is word'
         )
 
