@@ -1,7 +1,7 @@
 class StringUtil:
     @staticmethod
-    def is_empty_string(string):
-        return string is None or string == ''
+    def is_none(string):
+        return string is None or string.strip() == ''
 
     @staticmethod
     def comma_string_to_list(string):

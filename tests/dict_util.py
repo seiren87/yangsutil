@@ -69,3 +69,30 @@ class DictUtilTestCase(unittest.TestCase):
             },
             msg='array list sort'
         )
+
+    def test_2_is_validate_key(self):
+        test_dict = {
+            'abcd': 1234,
+            'fff aa': 'fefe',
+            1234: 'fffee'
+        }
+
+        self.assertTrue(
+            DictUtil.is_avail_key(test_dict, 'abcd'),
+            msg='string key test'
+        )
+
+        self.assertTrue(
+            DictUtil.is_avail_key(test_dict, 'fff aa'),
+            msg='string with blank key test'
+        )
+
+        self.assertTrue(
+            DictUtil.is_avail_key(test_dict, 1234),
+            msg='integer key test'
+        )
+
+        self.assertFalse(
+            DictUtil.is_avail_key(test_dict, 'a'),
+            msg='error key test'
+        )

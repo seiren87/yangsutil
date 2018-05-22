@@ -1,6 +1,7 @@
 from tests.datetime_util import DateTimeUtilTestCase
 from tests.dict_util import DictUtilTestCase
 from tests.file_util import FileUtilTestCase
+from tests.integer_util import IntegerUtilTestCase
 from tests.log_util import LogUtilTestCase
 from tests.object_util import ObjectUtilTestCase
 from tests.shield_util import ShieldUtilTestCase

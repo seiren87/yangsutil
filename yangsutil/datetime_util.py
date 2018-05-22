@@ -156,3 +156,12 @@ class DateTimeUtil:
         total_seconds = (days * 60 * 60 * 24) + seconds
 
         return total_seconds
+
+    @staticmethod
+    def get_timestamp(src_object=None, src_object_form='%Y%m%d', gap=0, datetime_type=4):
+        return int(DateTimeUtil.get_object(
+            src_object=src_object,
+            src_object_form=src_object_form,
+            gap=gap,
+            datetime_type=datetime_type
+        ).timestamp())

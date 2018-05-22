@@ -1,6 +1,7 @@
 from yangsutil.datetime_util import DateTimeUtil
 from yangsutil.dict_util import DictUtil
 from yangsutil.file_util import FileUtil
+from yangsutil.integer_util import IntegerUtil
 from yangsutil.log_util import LogUtil
 from yangsutil.object_util import ObjectUtil
 from yangsutil.shield_util import ShieldUtil

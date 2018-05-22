@@ -13,9 +13,11 @@ $ pip install yangsutil
     - get_range
     - get_weekend
     - get_datetime_diff
+    - get_timestamp
 
 2. dict_util
     - dict_list_to_dict
+    - is_avail_key
 
 3. File Util
     - make_folder
@@ -44,7 +46,7 @@ $ pip install yangsutil
     - decrypt_aes
 
 8. String Util
-    - is_empty_string
+    - is_none
     - comma_string_to_list
     - list_to_comma_string
     - number_expression
