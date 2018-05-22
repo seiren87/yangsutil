@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='yangsutil',
-    version='0.0.2',
+    version='0.1.0',
     description='Utilities',
     long_description='Utilities',
     keywords=['util', 'datetime', 'request', 'crypt'],
